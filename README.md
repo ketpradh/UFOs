@@ -14,3 +14,10 @@ Example - filter on city "Fresno" - gives results for only city Fresno
 Example - filter on state=ca, date= 1/1/2010 and shape=light. - Gives results for California state on 1/1/2010 with light shape.
 ![](https://github.com/ketpradh/UFOs/blob/main/Resources/Filter%20on%20multiple%20criteria.PNG)
 ## Summary
+This is a good way to display and handle dynamic data in a webpage. However, this has a few drawbacks as follows -
+- The filter search is an exact search provided for input fields, so any typos may result in incorrect filtering and user reporting.
+- The filter search does not perform any error handling for the input fields.
+### Recommendations
+- The app.js script used for filtering should handle the user input for typos and provide a perhaps wildcard('*') search to make the user experience better.
+- The script should also include error handling such as provide the user with an success/error message if the input field format is incorrect.
+- The script can be made flexible so that the filter works on entering the filter criteria and without user having to hit the Enter key everytime.
