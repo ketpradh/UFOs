@@ -8,9 +8,11 @@ The webpage highlights the UFO listings in a table that can be filtered using th
 ### Steps to filter data -
 To filter based on a single input criteria of say city, enter the value in the filter under the filter heading and hit "Enter" on your keyboard.
 - **Please note - input format for every input field is specified in the box. Pressing the Enter key is necessary to see updated results.**
+
 Example - filter on city "Fresno" - gives results for city Fresno only.
 ![](https://github.com/ketpradh/UFOs/blob/main/Resources/Filter%20on%20city.PNG)
 - You can also filter based on multiple criteria such as city, shape and date, or state and date, etc.
+
 Example - filter on state=ca, date= 1/1/2010 and shape=light. - Gives results for California state on 1/1/2010 with light shape.
 ![](https://github.com/ketpradh/UFOs/blob/main/Resources/Filter%20on%20multiple%20criteria.PNG)
 - **Please remember to clear the previous filter values if you don't to filter the new results based on them or reload the page by pressing the F5 key.**
@@ -20,5 +22,7 @@ This is a good way to display and handle dynamic data in a webpage. However, thi
 - The filter search does not perform any error handling for the input fields, if the user enters an incorrect format for the input values.
 ### Recommendations
 - The javascript function used for filtering should handle the user input for typos and provide a perhaps wildcard('*') search to make the user experience better.
-- The script should also include error handling such as provide the user with an error message if the input field format is incorrect.
+- The script should also include error handling such as provide the user with an error message if the input field format is incorrect. 
+
+Example- If the user enters the date format as 2010/1/1 instead of 1/1/2010 by mistake. This can result in incorrect results.
 - The script can be made flexible so that the filter works on entering the filter criteria and without user having to hit the Enter key everytime.
