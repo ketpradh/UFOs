@@ -21,8 +21,8 @@ This is a good way to display and handle dynamic data in a webpage. However, thi
 - The filter search is an exact search provided for input fields, so any typos may result in incorrect filtering and user reporting.
 - The filter search does not perform any error handling for the input fields, if the user enters an incorrect format for the input values.
 ### Recommendations
-- The javascript function used for filtering should handle the user input for typos and provide a perhaps wildcard('*') search to make the user experience better.
-- The script should also include error handling such as provide the user with an error message if the input field format is incorrect. 
+- The javascript function used for filtering should handle the user input for typos and provide a perhaps wildcard('*') search to make the user experience better. This can be done by using string contains() function or by the use of Regular expressions. Perhaps relaxed search using '==' operators can also be used instead of '==='.
+- The script should also include error handling such as provide the user with an error message if the input field format is incorrect. Additional validation for the format of the input fields can be added.
 
 Example- If the user enters the date format as 2010/1/1 instead of 1/1/2010 by mistake. This can result in incorrect results.
 - The script can be made flexible so that the filter works on entering the filter criteria and without user having to hit the Enter key everytime.
