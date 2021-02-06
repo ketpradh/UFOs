@@ -34,10 +34,10 @@ function updateFilters() {
     let changedElement = d3.select(this);
     // 4b. Save the value that was changed as a variable.
     let changedVal = changedElement.property("value");
-    console.log(changedVal);
+   
     // 4c. Save the id of the filter that was changed as a variable.
     let changedID = changedElement.attr("id");
-    console.log(changedID);
+   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
   if (changedVal) {
@@ -47,7 +47,6 @@ function updateFilters() {
       delete filters[changedID];
       console.log("No Filters selected");
   }
- 
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
@@ -64,17 +63,13 @@ function updateFilters() {
     // Variable to hold the keys of the filter
     const keys = Object.keys(filters);
 
-    //console.log(keys);//For debugging
-
-    //No filter selected, do nothing
-    if(keys === []){ 
+   //check if any filters were selected
+    if(keys === []){  //No filter selected, do nothing
 
     }
-    else{
+    else{ //Filters present
       //loop through the keys to find the right key and match
       for(let i= 0; i<keys.length; i++){
-
-        //console.log(keys[i]+"" + filters[keys[i]]);
 
         if(keys[i]== "datetime"){
           filteredData = filteredData.filter(row => row.datetime === filters[keys[i]] );
@@ -104,20 +99,12 @@ function updateFilters() {
       };
     
       // 10. Finally, rebuild the table using the filtered data
-      buildTable(filteredData);
+      buildTable(filteredData); 
     };
   }
-  console.clear();
-  console.log("Listening to events...");
-  
+ 
   // 2. Attach an event to listen for changes to each filter
   d3.selectAll("input").on("change", updateFilters);
-  //Alternatively on individual input fields
-  //d3.select("#city").on("change", updateFilters);
-  //d3.select("#state").on("change", updateFilters);
-  //d3.select("#country").on("change", updateFilters);
-  //d3.select("#shape").on("change", updateFilters);
 
-  console.log("Building Filtered Table...");
   // Build the table when the page loads
   buildTable(tableData);
