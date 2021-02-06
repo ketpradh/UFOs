@@ -1,6 +1,6 @@
 # UFOs by Ketaki
 ## Overview of the project
-This project helps the user, Dana, to build a webpage that gives information on UFO sightings. This webpage is built using HTML, Javascript and styled using the Bootstrap library.
+This project helps the user, Dana, to build a webpage for information on UFO sightings. This webpage is built using HTML, Javascript and styled using the Bootstrap library.
 This webpage includes a dynamic table that filters the UFO listings data based on user input criteria for date,city,state,etc. This dynamic handling is performed using javascript functions and event handling.
 ## Results
 The webpage highlights the UFO listings in a table that can be filtered using the input criteria of date, city, state, country and shape,as shown - 
